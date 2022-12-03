@@ -1,12 +1,12 @@
-# Yew hybrid rendering ( server side AND client rendering ) 
+# Yew hybrid rendering
 
-Server side rendering is necessary when dealing with search engines.
+**Server side rendering** is necessary when *dealing with search engines ( SEO: Search engine optimization )*.
 
-Client side rendering is great for modern reactive web apps running on consumer devices.
+**Client side rendering** is great for *modern reactive web apps* running on consumer devices.
 
-Hybrid server side and client rendering is an absolute killer feature of modern web app frameworks such as [Nuxt](https://nuxtjs.org/).
+**Hybrid rendering** combines the best of two worlds and is an absolute killer feature of modern web app frameworks such as [Nuxt](https://nuxtjs.org/).
 
-Let's have the BEST of both worlds both with Rust, Actix and Yew!
+**Let's have the BEST of both worlds both with Rust, Actix and Yew!**
 
 ## Description
 

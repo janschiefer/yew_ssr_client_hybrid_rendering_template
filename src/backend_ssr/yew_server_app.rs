@@ -24,6 +24,7 @@ pub fn ServerApp( props: &ServerAppProps ) -> Html {
         .unwrap();
 
     html! {
+
         <Router history={history}>
 
             <Switch<YewRoute> render={ switch_yew_route }  />

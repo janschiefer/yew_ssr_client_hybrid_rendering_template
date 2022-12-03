@@ -1,3 +1,3 @@
-pub mod home;
-pub mod about;
-pub mod test;
+pub mod base_page;
+
+pub mod components;

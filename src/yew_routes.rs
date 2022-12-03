@@ -2,9 +2,7 @@ use yew::prelude::*;
 use yew_router::prelude::*;
 use yew::Html;
 
-use crate::pages::home::Home;
-use crate::pages::about::About;
-use crate::pages::test::Test;
+use crate::pages::base_page::BasePage;
 
 #[derive(Routable, PartialEq, Eq, Clone, Debug)]
 pub enum YewRoute {
@@ -12,20 +10,15 @@ pub enum YewRoute {
     Home,
     #[at("/about")]
     About,
-    #[at("/test/:id")]
-    Test { id: String } ,
 }
 
 pub fn switch_yew_route( routes: YewRoute ) -> Html {
     match routes {
         YewRoute::Home => {
-            html! { <Home /> }
+            html! { <BasePage subpage = { "home" } /> }
         },
         YewRoute::About => {
-            html! { <About /> }
-        },
-        YewRoute::Test { id } => {
-            html! { <Test id={ id.clone() } /> }
-        },
+            html! { <BasePage subpage = { "about" } /> }
+        }
     }
 }
