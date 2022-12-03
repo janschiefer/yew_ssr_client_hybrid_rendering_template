@@ -4,7 +4,7 @@ Server side rendering is necessary when dealing with search engines.
 
 Client side rendering is great for modern reactive web apps running on consumer devices.
 
-Hybrid server side and client rendering is an absolute killer feature of modern web app frameworks such as [Nuxt]((https://nuxtjs.org/)).
+Hybrid server side and client rendering is an absolute killer feature of modern web app frameworks such as [Nuxt](https://nuxtjs.org/).
 
 Let's have the BEST of both worlds both with Rust, Actix and Yew!
 
