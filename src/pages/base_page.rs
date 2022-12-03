@@ -5,6 +5,7 @@ use yew_router::prelude::*;
 
 use crate::pages::components::home_content::HomeContent;
 use crate::pages::components::about_content::AboutContent;
+use crate::pages::components::test_content::TestContent;
 
 
 #[derive(Properties, PartialEq, Eq, Debug, Clone)]
@@ -38,6 +39,9 @@ pub fn BasePage( props: &HomeProps  ) -> HtmlResult {
                                     }
                                     else if props.subpage.eq("about") {
                                         <AboutContent />
+                                    }
+                                    else if props.subpage.eq("test") {
+                                        <TestContent />
                                     }
 
                                 </div>

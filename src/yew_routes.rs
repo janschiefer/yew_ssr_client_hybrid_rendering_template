@@ -10,6 +10,8 @@ pub enum YewRoute {
     Home,
     #[at("/about")]
     About,
+    #[at("/test")]
+    Test,
 }
 
 pub fn switch_yew_route( routes: YewRoute ) -> Html {
@@ -19,6 +21,9 @@ pub fn switch_yew_route( routes: YewRoute ) -> Html {
         },
         YewRoute::About => {
             html! { <BasePage subpage = { "about" } /> }
+        },
+        YewRoute::Test => {
+            html! { <BasePage subpage = { "test" } /> }
         }
     }
 }

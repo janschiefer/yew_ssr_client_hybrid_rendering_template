@@ -60,6 +60,7 @@ pub async fn run_actix_server() -> std::io::Result<()> {
 
             .service( web::resource("/").route(web::get().to(ssr_render) ) )
             .service( web::resource("/about").route(web::get().to(ssr_render) ) )
+            .service( web::resource("/test").route(web::get().to(ssr_render) ) )
 
             .service( actix_files::Files::new("/", "./dist/") )
 
