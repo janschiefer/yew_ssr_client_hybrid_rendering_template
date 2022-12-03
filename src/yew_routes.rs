@@ -23,10 +23,9 @@ pub fn switch_yew_route( routes: YewRoute ) -> Html {
         },
         YewRoute::About => {
             html! { <About /> }
-        }
+        },
         YewRoute::Test { id } => {
             html! { <Test id={ id.clone() } /> }
-        }
-
+        },
     }
 }

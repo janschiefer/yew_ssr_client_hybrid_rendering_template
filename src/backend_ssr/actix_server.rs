@@ -58,9 +58,9 @@ pub async fn run_actix_server() -> std::io::Result<()> {
             .app_data( web::Data::new(web_application_data.clone()) )
 
 
-            .service( actix_web::web::resource("/").route(actix_web::web::get().to(ssr_render) ) )
-            .service( actix_web::web::resource("/about").route(actix_web::web::get().to(ssr_render) ) )
-            .service( actix_web::web::resource("/test/{id}").route(actix_web::web::get().to(ssr_render) ) )
+            .service( web::resource("/").route(web::get().to(ssr_render) ) )
+            .service( web::resource("/about").route(web::get().to(ssr_render) ) )
+            .service( web::resource("/test/{id}").route(web::get().to(ssr_render) ) )
 
             .service( actix_files::Files::new("/", "./dist/") )
 
