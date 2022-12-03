@@ -1,0 +1,54 @@
+[package]
+name = "yew_hybrid_ssr_client_template"
+version = "0.0.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.dev]
+opt-level = 0
+debug = true
+debug-assertions = true
+overflow-checks = true
+lto = false
+panic = 'unwind'
+incremental = true
+codegen-units = 256
+rpath = false
+
+[profile.release]
+opt-level = "z"
+debug-assertions = false
+overflow-checks = true
+lto = true
+panic = 'unwind'
+incremental = false
+codegen-units = 1
+rpath = false
+debug = false
+strip = 'debuginfo'
+
+[[bin]]
+name = "server_app"
+
+[dependencies]
+yew-router = "0.17"
+serde = { version = "1", features = ["derive"] }
+log = "0.4"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+yew = { version = "0.20", features = ["ssr"] } # Change this to your path
+tokio = { version = "1", features = ["full"] }
+actix-web = "4"
+actix-files = "0.6"
+clap = { version = "3.2.23", features = ["derive"] }
+qstring = "0.7.2"
+env_logger = "0.10.0"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+yew = { version = "0.20", features = ["hydration"] } # Change this to your path
+wasm-bindgen-futures = "0.4"
+wasm-logger = "0.2"
+wee_alloc = "0.4"
+
+
