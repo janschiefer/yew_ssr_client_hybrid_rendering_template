@@ -19,7 +19,7 @@ Actix is an awesome web backend written in Rust and according to benchmarks prop
 
 Run ./build-debug.sh for building in debug mode.
 
-Run ./build-production.sh for buildin in release mode.
+Run ./build-production.sh for building in release mode.
 
 ### Installing
 
