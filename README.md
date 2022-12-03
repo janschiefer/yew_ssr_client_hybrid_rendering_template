@@ -54,7 +54,7 @@ cargo install wasm-bindgen-cli
 ./build-debug.sh
 ```
 
-6. Navigat to http://localhost:8080 to view application
+6. Navigate to http://localhost:8080 to view application
 
 ## Authors
 
