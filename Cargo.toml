@@ -49,6 +49,4 @@ env_logger = "0.10.0"
 yew = { version = "0.20", features = ["hydration"] } # Change this to your path
 wasm-bindgen-futures = "0.4"
 wasm-logger = "0.2"
-wee_alloc = "0.4"
-
 
