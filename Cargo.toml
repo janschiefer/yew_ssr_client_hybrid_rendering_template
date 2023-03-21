@@ -32,21 +32,21 @@ strip = 'debuginfo'
 name = "server_app"
 
 [dependencies]
-yew-router = "0.17"
+yew-router = { git = "https://github.com/yewstack/yew.git" }
 serde = { version = "1", features = ["derive"] }
-log = "0.4"
+log = "0"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
-yew = { version = "0.20", features = ["ssr"] } # Change this to your path
+yew = { git = "https://github.com/yewstack/yew.git", features = ["ssr"] } # Change this to your path
 tokio = { version = "1", features = ["full"] }
 actix-web = "4"
-actix-files = "0.6"
-clap = { version = "3.2.23", features = ["derive"] }
-qstring = "0.7.2"
-env_logger = "0.10.0"
+actix-files = "0"
+clap = { version = "4", features = ["derive"] }
+qstring = "0"
+env_logger = "0"
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-yew = { version = "0.20", features = ["hydration"] } # Change this to your path
+yew = { git = "https://github.com/yewstack/yew.git", features = ["hydration"] } # Change this to your path
 wasm-bindgen-futures = "0.4"
 wasm-logger = "0.2"
 

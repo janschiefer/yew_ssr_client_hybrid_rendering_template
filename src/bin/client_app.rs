@@ -1,11 +1,5 @@
-extern crate wee_alloc;
-
 use yew::prelude::*;
 use yew_router::prelude::*;
-
-// Use `wee_alloc` as the global allocator.
-#[global_allocator]
-static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 use yew_hybrid_ssr_client_template::yew_routes::{ YewRoute, switch_yew_route };
 
